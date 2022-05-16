@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_300"
+    tools:context=".ui.activities.MovieActivity">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/check_your_connection"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_description"
+                android:scaleType="matrix" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title"
+                    style="@style/big_center_text"
+                    android:textSize="20sp"
+                    tools:text="Movie" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/subtitle"
+                    style="@style/big_center_text"
+                    android:textSize="16sp"
+                    tools:text="Subtitle" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Info" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/bold_text"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/genre" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/genres"
+                        style="@style/normal_text"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="4dp"
+                        tools:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/bold_text"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/release" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/release_date"
+                        style="@style/normal_text"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        tools:text="2021" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/bold_text"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/language" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/language"
+                        style="@style/normal_text"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="4dp"
+                        tools:text="9" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/bold_text"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/overview" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/overview"
+                    style="@style/normal_text"
+                    android:layout_marginTop="4dp"
+                    tools:text="Movie overview" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

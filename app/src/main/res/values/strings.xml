@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string name="check_your_connection">Please check your connection and try again!</string>
+    <string name="error">Error!</string>
+    <string name="release">Lançamento: </string>
+    <string name="language">Linguagem: </string>
+    <string name="genre">Gênero:</string>
+    <string name="overview">Overview</string>
+    <string name="image_description">Poster Movie</string>
+</resources>
